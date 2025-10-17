@@ -1,0 +1,493 @@
+/* ========================================== */
+/* =============== GLOBAL =================== */
+/* ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ========================================== */
+/* =============== NAVEGAÇÃO ================ */
+/* ========================================== */
+.navegacao {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 2.5vh;
+  z-index: 100;
+}
+
+.navegacao a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navegacao a:hover {
+  color: #4f46e5;
+}
+
+/* ========================================== */
+/* =============== HEADER =================== */
+/* ========================================== */
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main h1 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  white-space: pre-line;
+}
+
+.texto-claro {
+  color: #ffffff;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(262, 83%, 58%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ======================= Fundo */
+.fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #0e1118 0%, #161a23 100%);
+  filter: blur(20px);
+  transform: scale(1.2);
+  z-index: -1;
+}
+
+/* ======================= Cabeçalho */
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 3vh;
+}
+
+.desc {
+  color: #C0C0C0;
+  font-size: 1.3rem;
+}
+
+/* ========================================== */
+/* =============== BOTÕES =================== */
+/* ========================================== */
+.botoes-projeto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.botoes-projeto a {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  background: #3b82f6;
+  color: #081b29;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 50px 1px #000;
+  transition: all 0.3s ease;
+}
+
+.botoes-projeto a:hover {
+  background: rgba(0, 171, 240, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 171, 240, 0.4);
+}
+
+.botoes-projeto a i {
+  transition: transform 0.3s ease;
+}
+
+.botoes-projeto a:hover i {
+  transform: translateX(5px);
+}
+
+.botoes-projeto a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.botoes-projeto a:hover::before {
+  left: 100%;
+}
+
+/* ========================================== */
+/* =============== ÍCONES HOME ============== */
+/* ========================================== */
+.home-sci {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.home-sci i {
+  width: 5.4vh;
+  height: 5.4vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: #BFC5CC;
+  font-size: 3.5vh;
+  transition: 0.5s;
+}
+
+.home-sci i:hover {
+  transform: translateY(-8px) scale(1.1);
+  color: #0A66C2;
+}
+
+/* ========================================== */
+/* =============== SETA ===================== */
+/* ========================================== */
+.seta-baixo {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  color: #3b82f6;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+/* ========================================== */
+/* =============== SOBRE MIM ================ */
+/* ========================================== */
+.sobre-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(180deg,
+    hsl(220, 25%, 7%) 0%,
+    hsl(220, 20%, 10%) 50%,
+    hsl(220, 25%, 7%) 100%);
+}
+
+.sobre-section h1 {
+  font-size: 2.8rem;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.desc-sobremim {
+  color: hsl(215, 20%, 65%);
+  font-size: 1.1rem;
+  padding-bottom: 45px;
+}
+
+.paragrafo-sobre,
+.paragrafo-sobre2 {
+  color: hsla(210, 40%, 98%, 0.9);
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.paragrafo-sobre {
+  padding-bottom: 20px;
+}
+
+.paragrafo-sobre2 {
+  padding-bottom: 50px;
+}
+
+/* ========= HIGHLIGHTS SOBRE MIM ========= */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.highlight-card {
+  padding: 1.5rem;
+  background-color: hsl(220 25% 7%);
+  color: hsl(210 40% 98%);
+  border: 1px solid hsl(220 15% 20%);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  border-color: hsl(217 91% 60%);
+}
+
+.highlight-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  font-size: 26px;
+  color: hsl(217 91% 60%);
+}
+
+.highlight-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: hsl(210 40% 98%);
+}
+
+.highlight-description {
+  color: hsl(215 20% 65%);
+  line-height: 1.5;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* ========================================== */
+/* =============== SKILLS =================== */
+/* ========================================== */
+.skills-section {
+  background-color: hsl(220, 20%, 10%);
+  height: 60vh;
+}
+
+.skills-tittle {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.skills-tittle h1 {
+  padding-bottom: 20px;
+  font-size: 2.8rem;
+}
+
+.skills-tittle p {
+  color: #C0C0C0;
+  padding-bottom: 40px;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.skills-group h3 {
+  color: #3B82F6;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.skills-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.skill-badge {
+  background-color: #1E293B;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+  max-width: 140px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.skill-badge:hover {
+  background-color: hsl(217, 61%, 31%);
+  transform: translateY(-3px);
+}
+
+/* ========================================== */
+/* =============== CONTATO ================== */
+/* ========================================== */
+.contact-section {
+  text-align: center;
+  height: 80vh;
+  background-color: hsl(220, 25%, 7%);
+}
+
+.contact-tittle {
+  padding-top: 70px;
+}
+
+.contact-tittle h1 {
+  padding-bottom: 20px;
+  font-size: 2.8rem;
+}
+
+.contact-tittle p {
+  color: hsl(215, 20%, 65%);
+  font-size: 1.1rem;
+  padding-bottom: 45px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  background-color: hsl(220, 20%, 10%);
+  border: 1px solid hsl(220, 15%, 20%);
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  border-color: hsl(217, 91%, 60%);
+}
+
+.contact-icon {
+  color: hsl(217, 91%, 60%);
+  padding-bottom: 10px;
+  font-size: 26px;
+}
+
+.contact-label {
+  color: white;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.contact-text {
+  color: hsl(215 20% 65%);
+}
+
+/* ===== Botão Contato ===== */
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 50px;
+  padding: 0.75rem 2rem;
+  background-color: hsl(217, 91%, 60%);
+  color: hsl(220, 25%, 7%);
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0 60px hsl(217, 91%, 60%, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-button:hover {
+  background-color: hsl(217, 91%, 54%);
+  transform: translateY(-2px);
+  box-shadow: 0 0 80px hsl(217, 91%, 60%, 0.4);
+}
+
+.contact-button i {
+  font-size: 17px;
+}
+
+/* ========================================== */
+/* =============== RODAPÉ =================== */
+/* ========================================== */
+.baseboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: hsl(220, 20%, 10%);
+}
+
+.baseboard p {
+  color: hsl(215 20% 65%);
+}
+
+.baseboard-right {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-size: 3.5vh;
+}
+
+.baseboard-right a {
+  color: #BFC5CC;
+  transition: 0.3s ease;
+}
+
+.baseboard-right a:hover {
+  color: #0A66C2;
+  transform: translateY(-5px) scale(1.1);
+}
